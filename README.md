@@ -4,9 +4,4 @@ App web per visualizzare i parcheggi da OpenStreetMap con legenda per gratuiti, 
 
 ## Avvio rapido
 
-```bash
-cd app
-python -m http.server 8000
-```
-
-Poi apri <http://localhost:8000> nel browser.
+Apri `app/index.html` direttamente nel browser (es. tramite l'anteprima di GitHub o clic dal file system).
