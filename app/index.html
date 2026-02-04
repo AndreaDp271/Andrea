@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcheggi OSM</title>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Parcheggi OSM</h1>
+    <p>
+      Verde = gratis • Blu = a pagamento • Viola = disco orario
+    </p>
+  </header>
+
+  <main class="app-main">
+    <section class="controls">
+      <label>
+        Posizione o luogo
+        <input id="search-input" type="text" placeholder="Es. Milano, Piazza Duomo" />
+      </label>
+      <div class="controls-actions">
+        <button id="search-button" type="button">Cerca</button>
+        <button id="locate-button" type="button">Usa la mia posizione</button>
+      </div>
+      <p class="hint">
+        I parcheggi sono estratti da OpenStreetMap tramite Overpass API.
+      </p>
+    </section>
+
+    <section class="map-section">
+      <div id="map" aria-label="Mappa parcheggi"></div>
+    </section>
+
+    <aside class="legend">
+      <h2>Legenda</h2>
+      <ul>
+        <li><span class="legend-swatch free"></span>Parcheggio gratis</li>
+        <li><span class="legend-swatch paid"></span>Parcheggio a pagamento</li>
+        <li><span class="legend-swatch disc"></span>Parcheggio con disco orario</li>
+        <li><span class="legend-swatch loading"></span>Parking space speciale (emoji)</li>
+      </ul>
+    </aside>
+  </main>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script src="app.js"></script>
+</body>
+</html>
